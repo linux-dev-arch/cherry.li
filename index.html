@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="𝚌𝚑𝚎𝚛𝚛𝚢" property="og:title" />
+    <meta content="@wikitubia on discord" property="og:description" />
+    <meta content="‧₊˚ ⋅ picking cherries" property="og:site_name" />
+    <meta content="website" property="og:type" />
+    <meta content="en_US" property="og:locale" />
+    <meta content="https://cherry.cat/spinning_cherry.gif" property="og:image" />
+
+    <meta name="title" content="𝚌𝚑𝚎𝚛𝚛𝚢" />
+    <meta name="description" content="@wikitubia on discord" />
+    <meta name="keywords" content="website,cherry,cherri,apeclient,sigmaclient" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="author" content="https://cherry.cat/discord" />
+    <title>𝚌𝚑𝚎𝚛𝚛𝚢</title>
+    <link rel="shortcut icon" href="assets/content/images/cherry.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/content/stylesheets/style.css">
+</head>
+<body>
+    <div class="main-content">
+        <div class="profile">
+            <p id="motd" class="cherryrgb">...</p>
+        </div>
+
+        <div class="clock-box">
+            <div id="clockbox"></div>
+
+            <script type="text/javascript">
+                function GetClock() {
+                    var d = new Date();
+                    var nhour = d.getHours(), nmin = d.getMinutes(), nsec = d.getSeconds();
+                    if (nmin <= 9) nmin = "0" + nmin;
+                    if (nsec <= 9) nsec = "0" + nsec;
+
+                    var clocktext = "" + nhour + ":" + nmin + ":" + nsec + "";
+                    document.getElementById('clockbox').innerHTML = clocktext;
+                }
+
+                GetClock();
+                setInterval(GetClock, 1000);
+            </script>
+
+            <div id="datebox"></div>
+
+            <script type="text/javascript">
+                var tday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                var tmonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+                function GetClock() {
+                    var d = new Date();
+                    var nday = d.getDay(), nmonth = d.getMonth(), ndate = d.getDate(), nyear = d.getFullYear();
+
+                    var clocktext = "" + tday[nday] + ", " + tmonth[nmonth] + " " + ndate + ", " + nyear + "";
+                    document.getElementById('datebox').innerHTML = clocktext;
+                }
+
+                GetClock();
+                setInterval(GetClock, 1000);
+            </script>
+        </div>
+
+        <img src="assets/content/images/citywindow.webp" alt="cherry blossom">
+
+        <nav>
+            <ul>
+                <li><a href="https://youtube.com/friend">★ youtube</a></li>
+                <li><a href="/discord">☆ discord</a></li>
+                <li><a href="https://bsky.app/profile/cherry.cat">★ bluesky</a></li>
+                <li><a href="https://twitter.com/srcleak">☆ twitter</a></li>
+            </ul>
+
+            <ul>
+                <li><a href="/handles">★ yt handles</a></li>
+                <li><a href="https://github.com/targetstrafe">☆ github</a></li>
+                <li><a href="https://mine.ly/itvr">⚝ namemc</a></li>
+                <li><a href="https://open.spotify.com/playlist/6KJrR6ZPSdQfTZORkZQ6lS">☆ spotify</a></li>
+            </ul>
+
+            <ul>
+                <li><a href="https://solo.to/greedy">✦ solo.to</a></li>
+                <li><a href="https://last.fm/user/X9L">♪ last.fm</a></li>
+                <li><a href="https://mine.ly/hvh.cherry.cat">✪ hvh server</a></li>
+                <li><a href="mailto:admin@cherry.cat">✉ email</a></li>
+            </ul>
+        </nav>
+        <p id="description">...</p>
+        <p id="spotify-song">No song currently playing</p>
+    </div>
+    <script src="assets/content/scripts/lanyard.js"></script>
+    <script src="assets/content/scripts/motd.js"></script>
+</body>
+</html>
